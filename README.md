@@ -1,4 +1,4 @@
-# Busqueda_Mercado_libre
+# Busqueda de Mercado libre
 Este script de python realiza una busqueda en mercado libre, filtra y ordena.\
 
 ### Requisitos previos
