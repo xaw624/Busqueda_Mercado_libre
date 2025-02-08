@@ -8,4 +8,5 @@ Asegúrate de tener instalado lo siguiente:
 
 ### Instrucciones:
 - Clonar o descargar el repositorio.
-- instalar requirements.
+- Instalar requirements.
+- Ejecutar el archivo search.py
