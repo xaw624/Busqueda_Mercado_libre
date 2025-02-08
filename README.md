@@ -1,5 +1,5 @@
 # Busqueda de Mercado libre
-Este script de python realiza una busqueda en mercado libre, filtra y ordena.\
+Este script de python realiza una busqueda con filtros y ordenada en mercado libre.
 
 ### Requisitos previos
 Asegúrate de tener instalado lo siguiente:
