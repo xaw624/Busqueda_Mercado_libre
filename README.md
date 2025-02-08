@@ -6,7 +6,7 @@ Asegúrate de tener instalado lo siguiente:
   - Python 3.x
   - Chrome
 
-### Instrucciones:
+### Instrucciones
 - Clonar o descargar el repositorio.
 - Instalar requirements.
 - Ejecutar el archivo search.py
