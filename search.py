@@ -1,16 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
+
 service = Service(ChromeDriverManager().install()) #Instala los drivers necesarios para Chrome
 
 driver = webdriver.Chrome(service=service) #abre el navegador
+
+# Establecer el tiempo de espera implícito
+driver.implicitly_wait(10)  # Espera de 10 segundos
 
 driver.get("https://www.mercadolibre.com")  # navega a la url
 
@@ -33,10 +31,9 @@ driver.find_element(By.ID,":R2m55ee:-display-values").click() #Encontrar el menu
 
 driver.find_element(By.XPATH,"//span[contains(.,'Mayor precio')]").click() #Encontrar ciudad de méxico  y cliquear
 
-elementos = driver.find_elements(By.XPATH, "//div[contains(@class,'poly-card__content')]")
-
-for e in elementos[:5]:
-    nombre = e.find_element(By.XPATH, ".//h3").text
-    precio = e.find_element(By.XPATH, ".//span[contains(@class,'andes-money-amount__fraction')]").text
-    print(f"Nombre:{nombre}\n Precio:{precio}")
-input("...") 
+elementos = driver.find_elements(By.XPATH, "//div[contains(@class,'poly-card__content')]")[:5] #encuentra los elementos resultantes de la busqueda
+for e in elementos:
+    nombre = e.find_element(By.XPATH, ".//h3").text #titulo del producto
+    precio = e.find_element(By.XPATH, ".//span[contains(@class,'andes-money-amount__fraction')]").text #precio del producto
+    print(f"Nombre: {nombre}     Precio: {precio}")
+#input("...") 
